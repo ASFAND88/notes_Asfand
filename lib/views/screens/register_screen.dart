@@ -3,6 +3,9 @@ import 'package:sizer/sizer.dart';
 import 'package:untitled3/helpers/constants.dart';
 import 'package:untitled3/widgets/custom_textField.dart';
 
+import 'forgot_password_screen.dart';
+import 'login_screen.dart';
+
 class RegisterScreen extends StatefulWidget {
   @override
   State<RegisterScreen> createState() => _RegisterScreenState();
@@ -78,8 +81,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           color: NotesColor.neutralBlackColor,
                         ),
                       ),
-                      customTextField(hintText: 'Example: John Doe',
-                      keyboardType: TextInputType.text,
+                      customTextField(
+                        hintText: 'Example: John Doe',
+                        keyboardType: TextInputType.text,
                       ),
                       Text(
                         'Email Address',
@@ -90,8 +94,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           color: NotesColor.neutralBlackColor,
                         ),
                       ),
-                      customTextField(hintText: 'Example: johndoe@gmail.com',
-                      keyboardType: TextInputType.emailAddress,
+                      customTextField(
+                        hintText: 'Example: johndoe@gmail.com',
+                        keyboardType: TextInputType.emailAddress,
                       ),
                       Text(
                         'password',
@@ -152,7 +157,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           children: [
                             SizedBox(),
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => ForgotPassword()),
+                                );
+                              },
                               child: Text(
                                 'Register',
                                 style: TextStyle(
@@ -237,7 +247,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/loginScreen');
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LoginScreen()));
                     },
                     child: Text(
                       'Login Here',

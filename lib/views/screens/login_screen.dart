@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:untitled3/helpers/constants.dart';
 import 'package:sizer/sizer.dart';
+import 'package:untitled3/views/screens/register_screen.dart';
 
 import '../../widgets/custom_textField.dart';
+import 'forgot_password_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -93,7 +95,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     GestureDetector(
                       onTap: (){
-                        Navigator.pushNamed(context, '/ForgetPassword');
+                        Navigator.push(
+                          context,MaterialPageRoute(builder: (context)=>ForgotPassword()),
+                        );
                       },
                       child: Text(
                         'Forget Password',
@@ -110,7 +114,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/RegisterScreen');
+                        Navigator.push(
+                          context,MaterialPageRoute(builder: (context)=>RegisterScreen()),
+                        );
                       },
                       child: Container(
                         padding: EdgeInsets.symmetric(vertical: 10.sp),
@@ -212,7 +218,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/RegisterScreen');
+                        Navigator.push(
+                          context,MaterialPageRoute(builder: (context)=>RegisterScreen()),
+                        );
                       },
                       child: Text(
                         ' Register here',

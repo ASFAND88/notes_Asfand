@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:untitled3/helpers/constants.dart';
 import 'package:sizer/sizer.dart';
 
+import 'login_screen.dart';
+
 class onBoarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,9 @@ class onBoarding extends StatelessWidget {
               SizedBox(height: 20,),
               GestureDetector(
                 onTap: (){
-                  Navigator.pushNamed(context, '/loginScreen');
+                  Navigator.push(
+                    context,MaterialPageRoute(builder: (context)=>LoginScreen()),
+                  );
                 },
                 child: Container(
                   padding: EdgeInsets.symmetric(vertical: 7.sp),
