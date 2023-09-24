@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../../helpers/constants.dart';
 import '../layouts/layout_home_screen.dart';
 import '../layouts/layout_profile_screen.dart';
-import 'notes1_screen.dart';
+import '../screens/notes1_screen.dart';
 
-class HomeScreen extends StatefulWidget {
+class BottomNavigation extends StatefulWidget {
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<BottomNavigation> createState() => _BottomNavigationState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _BottomNavigationState extends State<BottomNavigation> {
   int selectedIndex=0;
 
   List layout = [
@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
         onPressed: (){
           setState(() {
             Navigator.push(context,
-            MaterialPageRoute(builder: (context)=>notesScreenOne(),),
+              MaterialPageRoute(builder: (context)=>notesScreenOne(),),
             );
           });
         },

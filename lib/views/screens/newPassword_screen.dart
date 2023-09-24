@@ -3,7 +3,7 @@ import 'package:sizer/sizer.dart';
 import 'package:untitled3/helpers/constants.dart';
 import 'package:untitled3/widgets/custom_textField.dart';
 
-import 'home_screen.dart';
+import '../layouts/bottom_navigation.dart';
 class NewPassword extends StatefulWidget{
   @override
   State<NewPassword> createState() => _NewPasswordState();
@@ -103,7 +103,7 @@ class _NewPasswordState extends State<NewPassword> {
                   child: GestureDetector(
                     onTap: (){
                       setState(() {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavigation()));
                       });
                     },
                     child: Text('Create Password',

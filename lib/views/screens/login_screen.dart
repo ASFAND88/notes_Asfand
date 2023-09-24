@@ -4,6 +4,7 @@ import 'package:sizer/sizer.dart';
 import 'package:untitled3/views/screens/register_screen.dart';
 
 import '../../widgets/custom_textField.dart';
+import '../layouts/bottom_navigation.dart';
 import '../layouts/layout_home_screen.dart';
 import 'forgot_password_screen.dart';
 
@@ -116,7 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
-                          context,MaterialPageRoute(builder: (context)=>LayoutHome()),
+                          context,MaterialPageRoute(builder: (context)=>BottomNavigation()),
                         );
                       },
                       child: Container(
