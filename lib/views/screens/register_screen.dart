@@ -6,7 +6,7 @@ import 'package:untitled3/widgets/custom_textField.dart';
 import 'forgot_password_screen.dart';
 import 'login_screen.dart';
 
-class RegisterScreen extends StatefulWidget {
+class RegisterScreen extends StatefulWidget{
   @override
   State<RegisterScreen> createState() => _RegisterScreenState();
 }
@@ -158,10 +158,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             SizedBox(),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => ForgotPassword()),
-                                );
+                                setState(() {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => ForgotPassword()),
+                                  );
+                                });
                               },
                               child: Text(
                                 'Register',

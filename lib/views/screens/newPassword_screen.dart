@@ -4,12 +4,12 @@ import 'package:untitled3/helpers/constants.dart';
 import 'package:untitled3/widgets/custom_textField.dart';
 
 import 'home_screen.dart';
-class createNewPassword extends StatefulWidget{
+class NewPassword extends StatefulWidget{
   @override
-  State<createNewPassword> createState() => _createNewPasswordState();
+  State<NewPassword> createState() => _NewPasswordState();
 }
 
-class _createNewPasswordState extends State<createNewPassword> {
+class _NewPasswordState extends State<NewPassword> {
   bool isHidden=false;
 
   IconData suffix=Icons.visibility_outlined;
@@ -19,35 +19,13 @@ class _createNewPasswordState extends State<createNewPassword> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: NotesColor.whiteColor,
-      appBar: AppBar(
-        backgroundColor: NotesColor.whiteColor,
-        elevation: 0,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: NotesColor.blackColor,
-            size: 15.sp,
-          ),
-        ),
-        title: Text(
-          'Back to Login',
-          style: TextStyle(
-            fontFamily: 'poppins',
-            fontWeight: FontWeight.w500,
-            fontSize: 13.sp,
-            color: NotesColor.appColor,
-          ),
-        ),
-      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.sp),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: 20.sp,),
               Text(
                 'Create a New Password',
                 style: TextStyle(
@@ -87,7 +65,7 @@ class _createNewPasswordState extends State<createNewPassword> {
                     isHidden=!isHidden;
                   });
                   isHidden==true
-                  ?suffix=Icons.visibility_off_outlined
+                      ?suffix=Icons.visibility_off_outlined
                       :Icons.visibility_outlined;
                 },
               ),
@@ -102,19 +80,19 @@ class _createNewPasswordState extends State<createNewPassword> {
                 ),
               ),
               SizedBox(height: 10.sp,),
-              customTextField(hintText: '*******',
-              isHidden: isHidden,
-              suffix: suffix,
-              onTab: (){
-                setState(() {
-                  isHidden=!isHidden;
-                });
-                isHidden==true
-                ?suffix=Icons.visibility_off_outlined
-                    :Icons.visibility_outlined;
-              },
+              customTextField(hintText: '********',
+                isHidden: isHidden,
+                suffix: suffix,
+                onTab: (){
+                  setState(() {
+                    isHidden=!isHidden;
+                  });
+                  isHidden==true
+                      ?suffix=Icons.visibility_off_outlined
+                      :Icons.visibility_outlined;
+                },
               ),
-              SizedBox(height: 30.sp,),
+              SizedBox(height: 40.sp,),
               Center(
                 child: Container(
                   padding: EdgeInsets.symmetric(vertical: 10.sp,horizontal: 30.sp),

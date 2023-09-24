@@ -4,7 +4,12 @@ import 'package:untitled3/widgets/custom_textField.dart';
 import '../../helpers/constants.dart';
 import 'create_newPassword_screen.dart';
 
-class ForgotPassword extends StatelessWidget {
+class ForgotPassword extends StatefulWidget {
+  @override
+  State<ForgotPassword> createState() => _ForgotPasswordState();
+}
+
+class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,8 +86,10 @@ class ForgotPassword extends StatelessWidget {
               child: Center(
                 child: GestureDetector(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>createNewPassword()),
-                    );
+                    setState(() {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>createNewPassword()),
+                      );
+                    });
                   },
                   child: Text('Send Code',
                   style: TextStyle(

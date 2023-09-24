@@ -9,4 +9,8 @@ class NotesColor{
   static const Color greyColor=Color(0xffbfbdc2);
   static const Color neutralBaseColor=Color(0xffC8C5CB);
   static const Color blackColor=Color(0xff100f10);
+  static const Color errorBaseColor=Color(0xffCE3A54);
+  static const Color pureBlackColor=Color(0xff000000);
+  static const Color baseWhiteColor=Color(0xffD9D9D9);
+  static const Color primaryLightColor=Color(0xffEFE9F7);
 }
