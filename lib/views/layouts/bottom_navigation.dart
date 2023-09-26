@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled3/views/layouts/screen_chats.dart';
 
 import '../../helpers/constants.dart';
 import '../layouts/layout_home_screen.dart';
@@ -34,6 +35,21 @@ class _BottomNavigationState extends State<BottomNavigation> {
           });
         },
         items: [
+          // BottomNavigationBarItem(
+          // icon: Icon(Icons.radar_rounded),
+          // label: 'status',),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.call_sharp),
+          //   label: 'calls',),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.groups_outlined),
+          //   label: 'communities',),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.wechat_sharp),
+          //   label: 'chats',),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.settings),
+          //   label: 'settings',),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
@@ -55,7 +71,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         },
         child: Icon(Icons.add,),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

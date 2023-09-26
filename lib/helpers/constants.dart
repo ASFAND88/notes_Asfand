@@ -13,4 +13,5 @@ class NotesColor{
   static const Color pureBlackColor=Color(0xff000000);
   static const Color baseWhiteColor=Color(0xffD9D9D9);
   static const Color primaryLightColor=Color(0xffEFE9F7);
+  static const Color blueColor=Color(0xff6b07f1);
 }

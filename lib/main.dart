@@ -19,12 +19,6 @@ class MyApp extends StatelessWidget {
     return Sizer(builder: (context, orientation, deviceType) => MaterialApp(
       debugShowCheckedModeBanner: false,
       home: onBoarding(),
-      // routes: {
-      //   '/loginScreen':(context)=>LoginScreen(),
-      //   '/RegisterScreen':(context)=>RegisterScreen(),
-      //   '/ForgetPassword':(context)=>ForgotPassword(),
-      // },
-      // home: createNewPassword(),
     ),
     ); // This trailing comma makes auto-formatting nicer for build methods.
   }
