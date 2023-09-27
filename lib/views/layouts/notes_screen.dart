@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled3/helpers/constants.dart';
-class notesScreenTwo extends StatelessWidget{
+class notesScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(

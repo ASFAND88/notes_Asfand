@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:untitled3/views/layouts/screen_chats.dart';
 
 import '../../helpers/constants.dart';
 import '../layouts/layout_home_screen.dart';
 import '../layouts/layout_profile_screen.dart';
-import '../screens/notes1_screen.dart';
-import 'home_screen2.dart';
+import 'home_notes.dart';
 
 class BottomNavigation extends StatefulWidget {
   @override
@@ -66,7 +64,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         onPressed: (){
           setState(() {
             Navigator.push(context,
-              MaterialPageRoute(builder: (context)=>notesScreenOne(),),
+              MaterialPageRoute(builder: (context)=>homeNotesScreen(),),
             );
           });
         },

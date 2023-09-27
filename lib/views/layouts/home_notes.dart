@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled3/helpers/constants.dart';
-import 'package:untitled3/views/screens/notes2_screen.dart';
 
 import '../layouts/bottom_navigation.dart';
 import '../layouts/home_screen2.dart';
 
-class notesScreenOne extends StatefulWidget {
+class homeNotesScreen extends StatefulWidget {
   @override
-  State<notesScreenOne> createState() => _notesScreenOneState();
+  State<homeNotesScreen> createState() => _homeNotesScreenState();
 }
 
-class _notesScreenOneState extends State<notesScreenOne> {
+class _homeNotesScreenState extends State<homeNotesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

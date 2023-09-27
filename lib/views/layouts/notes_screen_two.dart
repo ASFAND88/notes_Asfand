@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled3/helpers/constants.dart';
+
+import 'bottom_navigation.dart';
 class notesScreenTwo extends StatefulWidget{
   @override
   State<notesScreenTwo> createState() => _notesScreenTwoState();
@@ -120,16 +122,23 @@ class _notesScreenTwoState extends State<notesScreenTwo> {
                     onTap: (){
                       setState(() {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context)=>notesScreenTwo()));
+                            MaterialPageRoute(builder: (context)=>BottomNavigation()));
                       });
                     },
-                    child: Text('Save',
-                      style: TextStyle(
-                        fontFamily: 'poppins',
-                        fontSize: 13.sp,
-                        fontWeight: FontWeight.w500,
-                        color: NotesColor.whiteColor,
-                      ),),
+                    child: Container(
+                      padding: EdgeInsets.symmetric(vertical: 10.sp),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: NotesColor.appColor,
+                      ),
+                      child: Text('Save',
+                        style: TextStyle(
+                          fontFamily: 'poppins',
+                          fontSize: 13.sp,
+                          fontWeight: FontWeight.w500,
+                          color: NotesColor.whiteColor,
+                        ),),
+                    ),
                   ),
                 ),
               ),
