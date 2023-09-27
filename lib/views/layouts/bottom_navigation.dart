@@ -5,6 +5,7 @@ import '../../helpers/constants.dart';
 import '../layouts/layout_home_screen.dart';
 import '../layouts/layout_profile_screen.dart';
 import '../screens/notes1_screen.dart';
+import 'home_screen2.dart';
 
 class BottomNavigation extends StatefulWidget {
   @override

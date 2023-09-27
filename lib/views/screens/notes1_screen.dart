@@ -3,6 +3,9 @@ import 'package:sizer/sizer.dart';
 import 'package:untitled3/helpers/constants.dart';
 import 'package:untitled3/views/screens/notes2_screen.dart';
 
+import '../layouts/bottom_navigation.dart';
+import '../layouts/home_screen2.dart';
+
 class notesScreenOne extends StatefulWidget {
   @override
   State<notesScreenOne> createState() => _notesScreenOneState();
@@ -118,7 +121,7 @@ class _notesScreenOneState extends State<notesScreenOne> {
                     onTap: (){
                       setState(() {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context)=>notesScreenTwo()));
+                            MaterialPageRoute(builder: (context)=>BottomNavigation()));
                       });
                     },
                     child: Text('Save',
