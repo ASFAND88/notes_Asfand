@@ -16,10 +16,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Sizer(builder: (context, orientation, deviceType) => MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: onBoarding(),
-    ),
+    return Sizer(
+      builder: (context, orientation, deviceType) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: onBoarding(),
+      ),
     ); // This trailing comma makes auto-formatting nicer for build methods.
   }
 }

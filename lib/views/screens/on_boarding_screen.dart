@@ -35,11 +35,14 @@ class onBoarding extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               GestureDetector(
-                onTap: (){
+                onTap: () {
                   Navigator.push(
-                    context,MaterialPageRoute(builder: (context)=>LoginScreen()),
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
                   );
                 },
                 child: Container(

@@ -110,7 +110,6 @@ class _notesScreenTwoState extends State<notesScreenTwo> {
                   ),
                 ),
               ),
-              SizedBox(height: 40,),
               Center(
                 child: Container(
                   padding: EdgeInsets.symmetric(vertical: 10.sp,horizontal: 35.sp),

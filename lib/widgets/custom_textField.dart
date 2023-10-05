@@ -2,25 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled3/helpers/constants.dart';
 
-
 class customTextField extends StatelessWidget {
-  String hintText ='Example: johndoe@gmail.com';
+  String hintText = 'Example: johndoe@gmail.com';
   bool? isHidden;
+  int? maxLines;
   TextInputType? keyboardType;
   VoidCallback? onTab;
   IconData? suffix;
+  Icon? icon;
+  Color? color;
+  FormFieldValidator<String>? validator;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      keyboardType: keyboardType??TextInputType.emailAddress,
-      obscureText: isHidden?? false,
+      maxLines: maxLines ?? 1,
+      validator: validator ?? null,
+      keyboardType: keyboardType ?? TextInputType.emailAddress,
+      obscureText: isHidden ?? false,
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(horizontal: 10.sp,vertical: 8.sp),
-        suffix: GestureDetector(
-          onTap: onTab,
-            child: Icon(suffix)),
+        contentPadding: EdgeInsets.symmetric(horizontal: 10.sp, vertical: 8.sp),
+        suffix: GestureDetector(onTap: onTab, child: Icon(suffix)),
         hintText: hintText,
-        helperStyle: TextStyle(color:NotesColor.neutralBaseColor),
+        helperStyle: TextStyle(color: NotesColor.neutralBaseColor),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: NotesColor.neutralBaseColor),
           borderRadius: BorderRadius.circular(8),
@@ -29,6 +33,7 @@ class customTextField extends StatelessWidget {
           borderSide: BorderSide(color: NotesColor.neutralBaseColor),
           borderRadius: BorderRadius.circular(8),
         ),
+        prefixIcon: icon,
       ),
     );
   }
@@ -39,5 +44,9 @@ class customTextField extends StatelessWidget {
     this.keyboardType,
     this.onTab,
     this.suffix,
+    this.validator,
+    this.icon,
+    this.maxLines,
+    this.color,
   });
 }

@@ -15,20 +15,25 @@ class _LayoutProfileState extends State<LayoutProfile> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: NotesColor.whiteColor,
+      appBar: AppBar(
+        backgroundColor: NotesColor.whiteColor,
+        elevation: 0,
+        centerTitle:true,
+        title: Text(
+          'Profile',
+          style: TextStyle(
+            fontFamily: 'poppins',
+            fontWeight: FontWeight.w600,
+            fontSize: 21.sp,
+            color: NotesColor.neutralBlackColor,
+          ),
+        ),
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.sp),
           child: Column(
             children: [
-              Text(
-                'Profile',
-                style: TextStyle(
-                  fontFamily: 'poppins',
-                  fontWeight: FontWeight.w600,
-                  fontSize: 21.sp,
-                  color: NotesColor.neutralBlackColor,
-                ),
-              ),
               SizedBox(height: 15.sp,),
               Align(
                 alignment: Alignment.centerLeft,
@@ -43,6 +48,7 @@ class _LayoutProfileState extends State<LayoutProfile> {
                 ),
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Image.asset(
                     'assets/images/Icon.png',
@@ -122,7 +128,6 @@ class _LayoutProfileState extends State<LayoutProfile> {
                     border: Border.all(color: NotesColor.whiteColor),
                   ),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Image.asset(
                         'assets/images/lock-closed.png',
@@ -138,9 +143,7 @@ class _LayoutProfileState extends State<LayoutProfile> {
                           color: NotesColor.neutralBlackColor,
                         ),
                       ),
-                      SizedBox(),
-                      SizedBox(),
-                      SizedBox(),
+                      Spacer(),
                       Icon(Icons.arrow_forward_ios_outlined,size: 12.sp,),
                     ],
                   ),

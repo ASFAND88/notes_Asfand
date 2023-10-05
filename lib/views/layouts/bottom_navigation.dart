@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../helpers/constants.dart';
 import '../layouts/layout_home_screen.dart';
 import '../layouts/layout_profile_screen.dart';
-import 'home_notes.dart';
+import 'add_notes.dart';
 
 class BottomNavigation extends StatefulWidget {
   @override
@@ -12,7 +12,6 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   int selectedIndex=0;
-
   List layout = [
     LayoutHome(),
     LayoutProfile(),
@@ -24,7 +23,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
       resizeToAvoidBottomInset: false,
       body: layout [selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.yellow,
         selectedItemColor: NotesColor.appColor,
         unselectedItemColor: NotesColor.neutralDarkColor,
         currentIndex: selectedIndex,
@@ -34,21 +32,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
           });
         },
         items: [
-          // BottomNavigationBarItem(
-          // icon: Icon(Icons.radar_rounded),
-          // label: 'status',),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.call_sharp),
-          //   label: 'calls',),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.groups_outlined),
-          //   label: 'communities',),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.wechat_sharp),
-          //   label: 'chats',),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.settings),
-          //   label: 'settings',),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
